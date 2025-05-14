@@ -1,0 +1,97 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thanks to Xu Minghao's work                        %
+% I modify it into uchicago version                  %
+% to not make new bug, I don't alter "Ritsumeikan"   %
+% keywords in file. Pls feel free to use             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Beamer template for Ritsumeikan University       %
+% Author: Ming-Hao Xu (Xu Minghao)                   %
+% Date:   April 2022.                                %
+% LPPL Licensed.                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[spanish]{beamer}
+\usepackage{Ritsumeikan}
+\usepackage[export]{adjustbox}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[backend=bibtex,style=ieee,maxnames=1,minnames=1]{biblatex}
+\addbibresource{ref.bib}
+% other packages
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+\usepackage{tikz}
+
+% dummy text; remove it when working on this template
+\usepackage{lipsum}
+
+%Language Packages
+\usepackage[spanish]{babel}
+
+% Definir nuevos comandos para los integrantes y la facultad
+\author[Carrillo B. José E. \&  Robles O. José A.]{Carrillo Barreiro José Emiliano \\ Robles Ortero José Ángel}
+\title{Trabajo Terminal No. 2025-B065}
+\subtitle{Modelo para representar la interacción gravitacional de $2$ cuerpos}
+\institute{
+    Instituto Politécnico Nacional \\
+    Escuela Superior de Cómputo
+    }
+\newcommand{\directortesis}{Dr.\ Cesar Hernández Vasquez}
+\newcommand{\codirectortesis}{Dr.\ Mauricio Olguín Carbajal}
+\date{\today}
+
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{ccnuMainColor}{RGB}{0,86,109}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{ccnuMainColor},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+}
+
+
+\begin{document}
+
+    \begin{frame}
+        \titlepage%
+    \end{frame}
+
+    \include{secciones/01-introduccion}
+    \include{secciones/02-EstadoDelArte}
+    \include{secciones/03-MarcoTeorico}
+    \include{secciones/04-Planeacion}
+    \include{secciones/05-Analisis}
+    \include{secciones/06-Design.tex}
+
+    \section[Conclusiones]{Conclusiones y Trabajo a Futuro}
+
+    \begin{frame}
+        \begin{center}
+            {\Huge\calligra~¡Gracias por su atención!}\\
+            ¿Tienen alguna pregunta o comentario?
+        \end{center}
+    \end{frame}
+
+    \section*{Referencias}
+
+    \begin{frame}[allowframebreaks]
+        \frametitle{Referencias}
+        \begingroup
+        \fontsize{6pt}{7pt}\selectfont
+        \printbibliography[heading=none]
+        \endgroup
+    \end{frame}
+
+\end{document}
