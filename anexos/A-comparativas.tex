@@ -1,0 +1,169 @@
+\section{Tablas Comparativas del Marco Teórico}
+
+\begin{frame}{Anexo \thesection~: Lenguaje de Programación}
+    \centering
+    \captionof{table}{Comparativa de Lenguaje de Programación}%
+    \label{tab:comparativa}
+    \vspace{-0.1cm}
+    \begin{adjustbox}{max width=0.9\textwidth,max height=0.7\textheight, keepaspectratio}
+        \renewcommand{\arraystretch}{1.3}
+            \begin{tabular}{@{}>{\bfseries}p{0.5\textwidth} p{0.6\textwidth} >{\columncolor{yellow!30}}p{0.6\textwidth}@{}}
+            \toprule
+            \textbf{Característica} & \textbf{C++} & \textbf{Python} \\
+            \midrule
+            Velocidad de Ejecución & Máxima. Ideal para cálculos intensivos. & Menor. \\
+            Velocidad de Desarrollo & Lento y verboso. & Rápido, claro y flexible para iterar. \\
+            Bibliotecas Científicas & Potentes, pero más complejas de integrar. & Vastas y accesibles. \\
+            Visualización & Requiere herramientas externas. & Fácil con Matplotlib, Plotly o Bokeh. \\
+            Integración con REBOUND & Directa con linking C. & Interfaz oficial en Python lista para usar. \\
+            Algoritmos Bioinspirados & Óptimo si se implementan desde cero. & Fáciles de coordinar o conectar con código externo. \\
+            Gestión de Memoria & Manual. Mayor control. & Automática. Simplifica el desarrollo. \\
+            Curva de Aprendizaje & Alta.. & Baja a moderada.. \\
+            Prototipado / Experimentación & Lento. & Ágil. \\
+            Depuración & Complejo. & Sencillo. \\
+            Enfoque del Proyecto & Control total, pero puede complicar. & Permite centrarse en la solución y resultados. \\
+            \bottomrule
+            \end{tabular}
+    \end{adjustbox}
+    \smallskip
+\end{frame}
+
+
+\begin{frame}{Anexo \thesection~: Comparativa de Bibliotecas N-Cuerpos}
+    \centering
+    \captionof{table}{Comparativa extensa de bibliotecas para simulación N-cuerpos.}%
+    \label{tab:nbody-comparativa-beamer}
+    \vspace{-0.1cm} % Espacio como en el ejemplo
+    \begin{adjustbox}{max width=\textwidth, max height=0.7\textheight, keepaspectratio} % Aumentamos max height
+        % Ajustes de la tabla original
+        \renewcommand{\arraystretch}{1.2} % Reducido un poco por si acaso, puedes probar 1.3
+        \scriptsize % o \tiny si es necesario más pequeño
+        %\rowcolors{2}{gray!10}{white} % Colores de fila alternos, empezando por la segunda fila de datos
+        \begin{tabular}{
+            @{}>{\bfseries}p{0.4\textwidth}
+            >{\columncolor{yellow!30}}p{0.3\textwidth}
+            p{0.3\textwidth}
+            p{0.3\textwidth}
+            p{0.3\textwidth}
+            p{0.3\textwidth}@{}}
+        \toprule
+        \textbf{Característica} & \textbf{REBOUND} & \textbf{PKDGRAV3} & \textbf{AMUSE} & \textbf{NBody (Python)} & \textbf{PyGaia} \\
+        \midrule
+
+        Lenguaje Principal / Interfaz & C (Python API) & C++ & Python & Python & Python \\
+
+        Enfoque Principal & Colisional/no colisional, sistemas N-cuerpos & Cosmología a gran escala & Framework multipropósito & Simulaciones educativas & Análisis Gaia \\
+
+        Tipos de Problemas & Planetas, cúmulos, anillos & Galaxias, materia oscura & Multifísica astrofísica & Sistemas pequeños & Dinámica galáctica \\
+
+        Algoritmos de Gravedad & Barnes-Hut/Suma directa & TreePM & Hermite/Tree/SPH & Suma directa & Potenciales analíticos \\
+
+        Manejo de Colisiones & Sí (esferas duras) & No & Depende del backend & No & N/A \\
+
+        Integradores Numéricos & WHFast/ IAS15/ Leapfrog & Leapfrog KDK & Hermite/ Symplectic & RK/ Leapfrog & SciPy ODE \\
+
+        Hidrodinámica (SPH/Gas) & No  & Sí & Sí & No & No \\
+
+        Paralelización & MPI/OpenMP & MPI & MPI frameworks & Multiprocessing & CPU básica \\
+
+        Flexibilidad/Modularidad & Módulos intercambiables & Enfoque cosmología & Interoperabilidad & Implementación-dependiente & Centrado en Gaia \\
+
+        Facilidad de Uso (Python) & Excelente docs/API & N/A (C++) & Compleja (múltiples backends) & Variable & Astronomer-friendly \\
+
+        Comunidad/Mantenimiento & Activo desarrollo & Cosmología activa & Colaborativo & Individual & Soporte Gaia \\
+
+        Idoneidad para el Proyecto & \textbf{Óptimo:} • Soporta 2 cuerpos • Python • Modular & \textbf{Inadecuado:} Escala/física diferente & \textbf{Complejidad excesiva} para necesidades simples & \textbf{Muy básico} para requisitos & \textbf{Enfoque observacional} no aplicable \\
+        \bottomrule
+        \end{tabular}
+    \end{adjustbox}
+    \smallskip % Espacio como en el ejemplo
+\end{frame}
+
+\begin{frame}{Anexo \thesection~: Algoritmos de Optimización}
+    \centering
+    \captionof{table}{Comparativa de Bibliotecas de Optimización}%
+    \label{tab:comparativa}
+    \vspace{-0.1cm}
+    \begin{adjustbox}{max width=0.9\textwidth,max height=0.4\textheight, keepaspectratio}
+        \renewcommand{\arraystretch}{1.3}
+            \begin{tabular}{@{}>{\bfseries}p{0.2\textwidth} p{0.5\textwidth} p{0.5\textwidth} p{0.4\textwidth}@{}}
+            \toprule
+            \textbf{Biblioteca} & \textbf{Enfoque Clave / Fortaleza Principal} & \textbf{Ideal Para (Contexto del Proyecto)} & \textbf{Complejidad / Flexibilidad} \\
+            \midrule
+            \rowcolor{yellow!25}
+            \texttt{pymoo} & Framework moderno y completo para optimización \textbf{multiobjetivo} (y mono). Amplia gama de algoritmos. & Problemas complejos, si se requieren múltiples objetivos o algoritmos robustos mono-objetivo. & Moderada / Alta \\
+            \texttt{DEAP} & Máxima \textbf{flexibilidad} para construir algoritmos evolutivos desde cero. & Experimentación profunda con la estructura interna de los algoritmos (ej. GA personalizado). & Alta / Muy Alta \\
+            \texttt{Platypus} & \textbf{Optimización multiobjetivo fácil de usar} con algoritmos estándar (NSGA-II, SPEA2). & Implementación rápida de MOEAs conocidos, buen punto de partida para multiobjetivo. & Baja-Moderada / Moderada \\
+            \texttt{Inspyred} & Framework versátil para varios algoritmos evolutivos y metaheurísticas. & Exploración de diferentes tipos de algoritmos evolutivos si las opciones más nuevas no son prioritarias. & Moderada / Alta \\
+            \texttt{Nevergrad} & \textbf{Optimización sin derivadas (caja negra)}; ideal para funciones costosas/ruidosas. & Cuando la función objetivo (simulación + LE) es compleja y sin gradientes fáciles. & Moderada / Alta \\
+            \texttt{PyGMO/PaGMO} & \textbf{Alto rendimiento y paralelización} (backend C++) para problemas globales complejos. & Simulaciones muy costosas donde la paralelización es crítica para la eficiencia. & Moderada-Alta / Alta \\
+            \bottomrule
+            \end{tabular}
+    \end{adjustbox}
+    \smallskip
+\end{frame}
+
+\begin{frame}{Anexo \thesection~: Bibliotecas de Visualización}
+    \centering
+    \captionof{table}{Comparativa de Bibliotecas de Visualización}%
+    \label{tab:comparativa}
+    \vspace{-0.1cm}
+    \begin{adjustbox}{max width=\textwidth,max height=0.35\textheight, keepaspectratio}
+        \begin{tabular}{@{}>{\bfseries}p{0.35\textwidth} >{\columncolor{yellow!30}}p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}@{}}
+            \toprule
+            \textbf{Característica} & \textbf{Matplotlib} & \textbf{Plotly} & \textbf{Bokeh} & \textbf{Seaborn} \\
+            \midrule
+            Uso Principal/Fortaleza & Gráficos científicos. & Interactividad web. & Interactividad web. & Estadísticas. \\
+            Animación & Muy capaz. Ideal para simulaciones. & Buena para animaciones web. & Buena para datos en streaming. & Limitada. \\
+            Gráficos Estáticos & Excelente. & Buena. & Buena. & Regular. \\
+            Interactividad & Básica. & Alta. & Alta. & Básica. \\
+            Interfaz & Simple. & Web & Web. & N/A. \\
+            Calidad Publicación & Muy alta. & Alta. & Alta. & Alta. \\
+            Trayectorias 2D/3D & Directa. & Clara y efectiva. & Buena. & N/A. \\
+            Curva Aprendizaje (anim.) & Moderada. & Moderada. & Moderada. & Moderada. \\
+            Estética por Defecto & Funcional. & Moderna. & Flexible. & Mejorada estadísticas. \\
+            Comunidad/Docs & Muy extensa. & En crecimiento. & Buena. & Buena. \\
+            Adecuación Proyecto & Excelente: animación, análisis. & Interactividad web. & Prioridad web. & Análisis complementario. \\
+            \bottomrule
+        \end{tabular}
+    \end{adjustbox}
+    \smallskip
+\end{frame}
+
+\begin{frame}{Anexo \thesection~: Comparativa de Bibliotecas GUI}
+    \centering
+    \captionof{table}{Comparativa de bibliotecas Python para Interfaces Gráficas.}%
+    \label{tab:gui-comparativa-beamer}
+    \vspace{-0.1cm}
+    \begin{adjustbox}{max width=\textwidth, max height=0.8\textheight, keepaspectratio}
+        \renewcommand{\arraystretch}{1.2}
+        \scriptsize
+        %\rowcolors{2}{gray!10}{white}
+        \begin{tabular}{
+          @{}>{\bfseries}p{0.35\textwidth}
+          >{\columncolor{yellow!30}}p{0.25\textwidth}
+          p{0.25\textwidth}
+          p{0.25\textwidth}
+          p{0.25\textwidth}
+          p{0.25\textwidth}@{}}
+        \toprule
+        \textbf{Característica} & \textbf{PyQt} & \textbf{Tkinter} & \textbf{Streamlit} & \textbf{PySide} & \textbf{Dear PyGui} \\
+        \midrule
+        Toolkit subyacente & Qt (C++) & Tcl/Tk & React (Web) & Qt (C++) & GPU (ImGui-like) \\
+        Estilo & Profesional, personalizable & Anticuado, editable & Moderno, limpio & Igual a PyQt & Herramientas/juegos \\
+        Complejidad de desarrollo & Media-Alta & Baja-Media & Muy baja & Igual a PyQt & Media \\
+        Curva de aprendizaje & Moderada & Baja & Muy baja & Igual a PyQt & Requiere nuevo concepto \\
+        Rendimiento & Muy bueno, optimizado & Bueno en GUIs simples & Bueno, depende del navegador & Muy bueno, igual a PyQt & Excelente, acelerado GPU\\
+        Widgets disponibles & Extensa colección madura & Básica, útil & Limitada, centrada en datos & Igual a PyQt & Buena para herramientas\\
+        Layouts & Extensos, Qt Designer & Pack/grid/place & Automáticos, poco control        & Igual a PyQt & Control total programático \\
+        Integración gráfica & Excelente con Matplotlib, etc. & Buena con Matplotlib & Excelente para Plotly y Altair & Igual a PyQt & Posible, requiere ajustes      \\
+        Multihilo & Señales/slots robustos & Limitado, no thread-safe nativo  & Abstracción interna & Igual a PyQt & Usuario maneja concurrencia \\
+        Multiplataforma & Win/macOS/Linux  & Win/macOS/Linux & Navegador (web) & Win/macOS/Linux & Win/macOS/Linux \\
+        Licencia & GPL/comercial (LGPL en PyQt5) & Lib.\ estándar (libre) & Apache 2.0 (libre) & LGPL (comercial viable) & MIT (libre) \\
+        Comunidad y documentación & Amplia y activa & Amplia  & Activa & Activa y sólida & Creciente y entusiasta         \\
+        Idoneidad para el proyecto& Excelente: robusto, flexible, GUI + Matplotlib embebido & Adecuada para GUI simple & Menos ideal: mejor para dashboards web & Excelente alternativa LGPL & Paradigma distinto, menos directo \\
+        \bottomrule
+        \end{tabular}
+    \end{adjustbox}
+    \smallskip
+\end{frame}

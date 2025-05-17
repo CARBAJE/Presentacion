@@ -13,6 +13,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[spanish]{beamer}
+\usepackage{multicol}
 \usepackage{Ritsumeikan}
 \usepackage[export]{adjustbox}
 \usepackage{hyperref}
@@ -25,10 +26,16 @@
 \usepackage{tikz}
 \usepackage{media9}
 \usepackage{multimedia}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{adjustbox}
 % dummy text; remove it when working on this template
 \usepackage{lipsum}
 %Language Packages
 \usepackage[spanish]{babel}
+
 \usepackage{ragged2e}
 \justifying%
 
@@ -48,6 +55,7 @@
 \definecolor{ccnuMainColor}{RGB}{0,86,109}
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 \definecolor{halfgray}{gray}{0.55}
+
 
 \lstset{
     basicstyle=\ttfamily\small,
@@ -76,14 +84,8 @@
 
     \section[Conclusiones]{Conclusiones y Trabajo a Futuro}
 
-    \begin{frame}
-        \begin{center}
-            {\Huge\calligra~¡Gracias por su atención!}\\
-            ¿Alguna pregunta o comentario?
-        \end{center}
-    \end{frame}
 
-    \section*{Referencias}
+    \section{Referencias}
 
     \begin{frame}[allowframebreaks]
         \frametitle{Referencias}
@@ -92,5 +94,28 @@
         \printbibliography[heading=none]
         \endgroup
     \end{frame}
+
+    \begin{frame}
+        \begin{center}
+            {\Huge\calligra~¡Gracias por su atención!}\\
+            ¿Alguna pregunta o comentario?
+        \end{center}
+    \end{frame}
+
+    \appendix
+    \makeatletter
+    \renewcommand{\thesection}{\Alph{section}}
+    \@addtoreset{section}{part}
+    \makeatother
+    \setcounter{section}{0}
+
+    \begin{frame}
+        \begingroup
+            \begin{center}
+                {\Huge Anexos}
+            \end{center}
+        \endgroup
+    \end{frame}
+    \input{anexos/A-comparativas.tex}
 
 \end{document}

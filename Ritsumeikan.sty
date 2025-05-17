@@ -78,11 +78,13 @@
 \setbeamercolor{subsection in sidebar shaded}{fg=grey}
 \AtBeginSection[]{
 	\begin{frame}
-		\tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
-	\end{frame}
+    \small
+    \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+  \end{frame}
 }
 \AtBeginSubsection[]{
 	\begin{frame}
+    \small
 		\tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
 	\end{frame}
 }
@@ -166,3 +168,13 @@
 }
 \mode
 <all>
+
+% miniframes config
+%\makeatletter
+%  \beamer@compressfalse
+%\makeatother
+
+% Sección de apéndice sin bullets va en slide.tex
+%\appendix
+%\setbeamertemplate{section in head/foot}{}
+%\setbeamertemplate{section in head/foot shaded}{}
