@@ -2,7 +2,7 @@
 
 \begin{frame}{Juicio de Expertos: M.C. José Alberto Torres León}
   \textbf{Perfil del Experto}
-  \RaggedRight
+  \RaggedRight%
   \scriptsize
   Egresado del Centro de Investigación en Cómputo (CIC) del Instituto Politécnico Nacional, sus áreas de especialización
   incluyen agentes inteligentes para videojuegos (jugadores y dinámicos), optimización evolutiva entre otros.
@@ -10,7 +10,7 @@
   \bigskip
 
   \textbf{Resumen de Opiniones y Observaciones Obtenidas}
-  \RaggedRight
+  \RaggedRight%
   \scriptsize
   Tras la revisión del material y la discusión, el M.C. Torres León aportó las siguientes observaciones y valoraciones:
   \begin{itemize}
@@ -39,51 +39,135 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Requerimientos funcionales}
-  \begin{columns}[T]
-    \column{0.5\textwidth}
-      \begin{itemize}
-        \item Iniciar simulación dinámica de masa.
-        \item Simular interacciones gravitacionales.
-        \item Usar método multipolar rápido y Barnes-Hut.
-      \end{itemize}
-    \column{0.5\textwidth}
-      \begin{itemize}
-        \item Implementar algoritmos bioinspirados para ajustar dinámicamente los parametros.
-        \item Incluir módulo de visualización gráfica de evolución.
-        \item Ofrecer interfaz básica para modificar parámetros.
-      \end{itemize}
-  \end{columns}
+% \begin{frame}{Requerimientos funcionales}
+%   \begin{columns}[T]
+%     \column{0.5\textwidth}
+%       \begin{itemize}
+%         \item Iniciar simulación dinámica de masa.
+%         \item Simular interacciones gravitacionales.
+%         \item Usar método multipolar rápido y Barnes-Hut.
+%       \end{itemize}
+%     \column{0.5\textwidth}
+%       \begin{itemize}
+%         \item Implementar algoritmos bioinspirados para ajustar dinámicamente los parametros.
+%         \item Incluir módulo de visualización gráfica de evolución.
+%         \item Ofrecer interfaz básica para modificar parámetros.
+%       \end{itemize}
+%   \end{columns}
+% \end{frame}
+
+\begin{frame}{Requerimientos Funcionales}
+  \vspace{-0.5cm}
+  \begin{table}[H]
+      \centering
+      \caption{Requerimientos Funcionales}
+      \vspace{-0.35cm}
+      \begin{adjustbox}{max width=1\textwidth,max height=0.4\textheight, keepaspectratio}
+      \begin{tabular}{p{1cm}p{5cm}p{1.75cm}p{2.25cm}p{5cm}}
+      \toprule %chktex 44
+      \textbf{ID} & \textbf{Descripción} & \textbf{Prioridad} & \textbf{Actor} & \textbf{Criterios de Aceptación} \\
+      \midrule
+      RF-001 & Modificación dinámica de la masa durante la simulación. & Alta & \seqsplit{Usuario/Modelo} & El usuario cambia la masa y la simulación responde adecuadamente. \\
+      \midrule
+      RF-002 & Simulación de interacciones gravitacionales entre dos cuerpos. & Alta & Modelo & Se calculan y representan correctamente las fuerzas gravitacionales. \\
+      \midrule
+      RF-003 & Uso de FMM y Barnes-Hut para optimización. & Media & Modelo & Se implementan y mejoran el rendimiento frente a métodos directos. \\
+      \midrule
+      RF-004 & Ajuste dinámico de parámetros mediante algoritmos bioinspirados. & Alta & Modelo & Mantienen la estabilidad del sistema durante cambios. \\
+      \midrule
+      RF-005 & Visualización gráfica de la evolución de los cuerpos. & Media & Usuario & Muestra trayectorias y estados claramente durante la simulación. \\
+      \midrule
+      RF-006 & Interfaz básica para modificar parámetros y ver resultados. & Media & Usuario & El usuario ajusta parámetros y observa los efectos. \\
+      \bottomrule
+      \end{tabular}
+      \end{adjustbox}
+  \end{table}
 \end{frame}
 
-\begin{frame}{Requerimientos no funcionales}
-  \begin{columns}[T]
-    \column{0.3\textwidth}
-      \begin{itemize}
-        \item Optimizar complejidad de simulaciones.
-        \item Permitir extensión futura a más de dos cuerpos.
-        \item Respetar leyes de la física y mecánica celeste.
-      \end{itemize}
-    \column{0.3\textwidth}
-      \begin{itemize}
-        \item Mantener simulaciones estables al modificar parámetros.
-        \item Ser interfaz intuitiva y accesible.
-        \item Ejecutarse en hardware de gama media.
-      \end{itemize}
-    \column{0.3\textwidth}
-      \begin{itemize}
-        \item Integrarse con entornos virtuales (Unreal Engine).
-        \item Ser modular para facilitar actualizaciones y correcciones.
-        \item Incluir documentación clara.
-      \end{itemize}
-  \end{columns}
+% \begin{frame}{Requerimientos funcionales}
+%   \begin{columns}[T]
+%     \column{0.5\textwidth}
+%       \begin{itemize}
+%         \item Iniciar simulación dinámica de masa.
+%         \item Simular interacciones gravitacionales.
+%         \item Usar método multipolar rápido y Barnes-Hut.
+%       \end{itemize}
+%     \column{0.5\textwidth}
+%       \begin{itemize}
+%         \item Implementar algoritmos bioinspirados para ajustar dinámicamente los parametros.
+%         \item Incluir módulo de visualización gráfica de evolución.
+%         \item Ofrecer interfaz básica para modificar parámetros.
+%       \end{itemize}
+%   \end{columns}
+% \end{frame}
+
+\begin{frame}{Requerimientos No Funcionales}
+  \vspace{-0.4cm}
+  \begin{table}[H]
+      \centering
+      \caption{Requerimientos No Funcionales}
+      \vspace{-0.35cm}
+      \begin{adjustbox}{max width=1\textwidth, max height=0.4\textheight, keepaspectratio}
+      \begin{tabular}{p{1.2cm}p{5cm}p{1.75cm}p{2.25cm}p{5cm}}
+      \toprule
+      \textbf{ID} & \textbf{Descripción} & \textbf{Prioridad} & \textbf{Actor} & \textbf{Criterios de Aceptación} \\
+      \midrule
+      RNF-001 & Optimización de la simulación para eficiencia computacional. & Alta & Modelo & Ejecuta en tiempo razonable y sin alto consumo de recursos. \\
+      \midrule
+      RNF-002 & Soporte a futuro para más de dos cuerpos. & Media & Modelo & Escalable sin cambios estructurales mayores. \\
+      \midrule
+      RNF-003 & Respeto a leyes físicas en interacciones gravitacionales. & Alta & Modelo & Resultados coherentes con la física. \\
+      \midrule
+      RNF-004 & Estabilidad ante modificaciones dinámicas de parámetros. & Alta & Modelo & No colapsa ni muestra comportamientos erráticos. \\
+      \midrule
+      RNF-005 & Interfaz intuitiva y accesible para usuarios no técnicos. & Media & Usuario & Puede usarse sin conocimientos avanzados. \\
+      \midrule
+      RNF-006 & Ejecución en hardware de gama media. & Media & Modelo & Funciona en equipos con especificaciones mínimas. \\
+      \midrule
+      RNF-007$^{*}$ & Integración con entornos como Unreal Engine. & Baja & Modelo & Integración funcional con motores externos. \\
+      \midrule
+      RNF-008 & Arquitectura modular para facilitar mantenimiento. & Media & Desarrollador & Componentes separados y modificables. \\
+      \midrule
+      RNF-009 & Documentación clara para usuarios y desarrolladores. & Media & Desarrollador & Completa y comprensible para todos los perfiles. \\
+      \bottomrule
+      \end{tabular}
+      \vspace{0.5em}
+      \end{adjustbox}
+      \begin{minipage}{\textwidth}
+    \footnotesize{\tiny $^{*}$ El requerimiento no funcional No. 07 (RNF-007), solo hace mención a la idea conceptual del requerimiento, no se plantea su elaboración.}
+    \end{minipage}
+  \end{table}
+
 \end{frame}
+
+% \begin{frame}{Requerimientos no funcionales}
+%   \begin{columns}[T]
+%     \column{0.3\textwidth}
+%       \begin{itemize}
+%         \item Optimizar complejidad de simulaciones.
+%         \item Permitir extensión futura a más de dos cuerpos.
+%         \item Respetar leyes de la física y mecánica celeste.
+%       \end{itemize}
+%     \column{0.3\textwidth}
+%       \begin{itemize}
+%         \item Mantener simulaciones estables al modificar parámetros.
+%         \item Ser interfaz intuitiva y accesible.
+%         \item Ejecutarse en hardware de gama media.
+%       \end{itemize}
+%     \column{0.3\textwidth}
+%       \begin{itemize}
+%         \item Integrarse con entornos virtuales (Unreal Engine).
+%         \item Ser modular para facilitar actualizaciones y correcciones.
+%         \item Incluir documentación clara.
+%       \end{itemize}
+%   \end{columns}
+% \end{frame}
 
 \begin{frame}{Formulación del Problema de Optimización}
 
 \begin{block}{Función Objetivo}
   Minimizar el valor absoluto del exponente de Lyapunov ($\lambda$) en función de las masas $m_1$ y $m_2$:
-  $$ \text{Minimizar} \quad |\lambda(m_1, m_2)| $$
+  $$ \text{Minimizar} \quad |\lambda(m_1, m_2)| $$ %chktex 45
 \end{block}
 
 \begin{block}{Variables de Decisión}
@@ -97,13 +181,13 @@
 \begin{frame}{Formulación del Problema de Optimización}
 \begin{block}{Restricciones}
   \begin{itemize}
-      \item El exponente de Lyapunov debe ser menor a 0.1:
-      $$ \lambda(m_1, m_2) < 0.1 $$
-      \item La masa del cuerpo 2 debe ser menor a 10 veces la masa del cuerpo 1:
-      $$ m_2 < 10 m_1 $$
+      \item El exponente de Lyapunov debe ser menor a $\alpha$:
+      $$ \lambda(m_1, m_2) < \alpha $$ %chktex 45
+      \item La masa del cuerpo 2 debe ser menor a $\mu$ veces la masa del cuerpo 1:
+      $$ m_2 < \mu m_1 $$ %chktex 45
       \item Las masas deben ser positivas:
-      $$ m_1 > 0 $$
-      $$ m_2 > 0 $$
+      $$ m_1 > 0 $$ %chktex 45
+      $$ m_2 > 0 $$ %chktex 45
   \end{itemize}
 \end{block}
 

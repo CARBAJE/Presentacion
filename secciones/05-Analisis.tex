@@ -2,7 +2,7 @@
 
 \begin{frame}{Matríz de procesos}
     \centering
-    \captionof{table}{Matríz de procesos}
+    \captionof{table}{Matríz de procesos I}%
     \label{tab:procesos}
     \vspace{-0.1cm}
     \begin{adjustbox}{max width=0.9\textwidth,max height=0.7\textheight, keepaspectratio}
@@ -25,9 +25,9 @@
 \end{frame}
 
 
-\begin{frame}{Matríz de procesos}
+\begin{frame}{Matríz de procesos II}
     \centering
-    \captionof{table}{Matríz de procesos}
+    \captionof{table}{Matríz de procesos}%
     \label{tab:procesos}
     \vspace{-0.1cm}
     \begin{adjustbox}{max width=0.9\textwidth,max height=0.7\textheight, keepaspectratio}
@@ -42,7 +42,7 @@
             \midrule
             \textbf{Recolectar Datos} & Extraer estado actual del sistema en instantes de visualización. & Estructura \texttt{\seqsplit{VisualizationState}} con instantánea del sistema. \\
             \midrule
-            \textbf{Generar Gráficos} & Dibujar o actualizar la representación visual en la pantalla. & Representación gráfica actualizada en la UI. \\
+            \textbf{Generar Gráficos} & Dibujar o actualizar la representación visual en la pantalla. & Representación gráfica actualizada en la UI.\\
             \bottomrule
             \end{tabular}
     \end{adjustbox}
@@ -51,22 +51,22 @@
 
 \begin{frame}{Diccionario de Datos: Cuerpo celeste}
   \centering
-  \captionof{table}{Cuerpo celeste.}
+  \captionof{table}{Cuerpo celeste.}%
   \label{tab:diccionario_cuerpos_slide}
   \begin{adjustbox}{max width=0.9\textwidth}
     \begin{tabular}{@{}p{3cm} p{4cm} p{1.5cm} p{1.5cm} p{2.5cm}@{}}
       \toprule
       \textbf{Nombre del atributo} & \textbf{Descripción} & \textbf{Tipo} & \textbf{Rango} & \textbf{Ejemplo} \\
       \midrule
-      \textbf{masa} & Masa del cuerpo celeste... & \texttt{float} & \(>0\) (positivos)... & 1.0 \\
+      \textbf{masa} & Masa del cuerpo celeste\ldots & \texttt{float} & \(>0\) (positivos)\ldots & 1.0 \\
       \midrule
-      \textbf{a} & Semieje mayor de la órbita... & \texttt{float} & \(>0\) (positivos) & 1.0 \\
+      \textbf{a} & Semieje mayor de la órbita\ldots & \texttt{float} & \(>0\) (positivos) & 1.0 \\
       \midrule
-      \textbf{e} & Excentricidad orbital... & \texttt{float} & [0, 1) & 0.1 \\
+      \textbf{e} & Excentricidad orbital\ldots & \texttt{float} & $[0, 1)$ & 0.1 \\
       \midrule
-      \textbf{inc\_deg} & Inclinación orbital... & \texttt{float} & [0°, 180°] & 30.0 \\
+      \textbf{inc\_deg} & Inclinación orbital\ldots & \texttt{float} & [0°, 180°] & 30.0 \\
       \midrule
-      \textbf{perturba} & Indica si se aplica... & \texttt{bool} & \texttt{True} o \texttt{False} & True \\
+      \textbf{perturba} & Indica si se aplica\ldots & \texttt{bool} & \texttt{True} o \texttt{False} & True \\
       \bottomrule
     \end{tabular}
   \end{adjustbox}
@@ -74,22 +74,22 @@
 
 \begin{frame}{Diccionario de Datos: Simulación}
   \centering
-  \captionof{table}{Simulación.}
+  \captionof{table}{Simulación.}%
   \label{tab:diccionario_simulación_slide}
   \begin{adjustbox}{max width=0.9\textwidth}
     \begin{tabular}{@{}p{3cm} p{4cm} p{1.5cm} p{1.5cm} p{2.5cm}@{}}
       \toprule
       \textbf{Nombre del atributo} & \textbf{Descripción} & \textbf{Tipo} & \textbf{Rango} & \textbf{Ejemplo} \\
       \midrule
-      \textbf{t\_max} & Tiempo total de simulación... & \texttt{float} & \( > 0 \) (positivos) & 100.0 \\
+      \textbf{t\_max} & Tiempo total de simulación\ldots & \texttt{float} & \( > 0 \) (positivos) & 100.0 \\
       \midrule
-      \textbf{N\_steps} & Número de pasos a almacenar... & \texttt{entero} & \(>0\) (positivos) & 1000 \\
+      \textbf{N\_steps} & Número de pasos a almacenar\ldots & \texttt{entero} & \(>0\) (positivos) & 1000 \\
       \midrule
-      \textbf{sim.units} & Unidades de la simulación... & \texttt{texto} & \texttt{AU, yr, Msun} & AU, yr, Msun \\
+      \textbf{sim.units} & Unidades de la simulación\ldots & \texttt{texto} & \texttt{AU, yr, Msun} & AU, yr, Msun \\
       \midrule
-      \textbf{sim.integrator} & Indica el integrador numérico... & \texttt{texto} & \texttt{ias15, whfast, BS, mercurius} & ias15 \\
+      \textbf{sim.integrator} & Indica el integrador numérico\ldots & \texttt{texto} & \texttt{ias15, whfast, BS, mercurius} & ias15 \\
       \midrule
-      \textbf{x, y, z} & Guarda las posiciones... & \texttt{array(float)} & \(>0\) (positivos) & [5.0, 230.0, 20.0] \\
+      \textbf{x, y, z} & Guarda las posiciones\ldots & \texttt{array(float)} & \(>0\) (positivos) & [5.0, 230.0, 20.0] \\
       \bottomrule
     \end{tabular}
   \end{adjustbox}
@@ -97,22 +97,22 @@
 
 \begin{frame}{Diccionario de Datos: Métricas}
   \centering
-  \captionof{table}{Métricas.}
+  \captionof{table}{Métricas.}%
   \label{tab:diccionario_métricas_slide}
   \begin{adjustbox}{max width=0.9\textwidth}
     \begin{tabular}{@{}p{3cm} p{4cm} p{2.5cm} p{1.5cm} p{2.5cm}@{}}
       \toprule
       \textbf{Nombre del atributo} & \textbf{Descripción} & \textbf{Tipo} & \textbf{Rango} & \textbf{Ejemplo} \\
       \midrule
-      \textbf{times} & Array que guarda los tiempos... & \texttt{array(float)} & \(>0\) (positivos) & [0.0, 100.0, 200.0] \\
+      \textbf{times} & Array que guarda los tiempos\ldots & \texttt{array(float)} & \(>0\) (positivos) & [0.0, 100.0, 200.0] \\
       \midrule
-      \textbf{energy} & Energía total del sistema... & \texttt{float} & Valor real & -0.5 \\
+      \textbf{energy} & Energía total del sistema\ldots & \texttt{float} & Valor real & -0.5 \\
       \midrule
-      \textbf{a\_arr, a\_pert} & Array que guarda el semieje... & \texttt{array(float)} & \(>0\) (positivos) & [1.0, 1.5, 2.0] \\
+      \textbf{a\_arr, a\_pert} & Array que guarda el semieje\ldots & \texttt{array(float)} & \(>0\) (positivos) & [1.0, 1.5, 2.0] \\
       \midrule
-      \textbf{e\_arr, e\_pert} & Array que guarda la excentricidad... & \texttt{array(float)} & [0, 1) & [0.1, 0.2, 0.3] \\
+      \textbf{e\_arr, e\_pert} & Array que guarda la excentricidad\ldots & \texttt{array(float)} & $[0, 1)$ & [0.1, 0.2, 0.3] \\
       \midrule
-      \textbf{Exponente de Lyapunov ($\mathbf{\lambda}$)}& Indica la tasa de crecimiento... & \texttt{float} & Valor real & 0.01 \\
+      \textbf{Exponente de Lyapunov ($\mathbf{\lambda}$)}& Indica la tasa de crecimiento\ldots & \texttt{float} & Valor real & 0.01 \\
       \bottomrule
     \end{tabular}
   \end{adjustbox}
