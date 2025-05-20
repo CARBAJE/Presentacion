@@ -167,3 +167,72 @@
     \end{adjustbox}
     \smallskip
 \end{frame}
+
+\begin{frame}{Anexo \thesection~: Enfoques principales en problemas de N-Cuerpos}
+    \centering
+    \begin{table}[H]
+    \centering
+    \caption[Enfoques en $n$ cuerpos]{\small Comparativa de enfoques principales a la hora de resolver problemas de $n$ cuerpos}%
+    \label{tab:EnfoquesNCuerpos}
+    \vspace{-0.2cm}
+    \begin{adjustbox}{max width=1.2\textwidth,max height=0.35\textheight, keepaspectratio}
+        \begin{tabular}{@{}p{0.3\textwidth}p{0.5\textwidth}cc@{}}
+            \toprule
+            \textbf{Enfoque} & \textbf{Descripción} & \textbf{Complejidad} & \textbf{Referencia} \\
+            \midrule
+            Solución Analítica (n=2) &
+            Método que resuelve el problema de Kepler para dos cuerpos.
+
+            Proporciona soluciones exactas para sistemas de dos objetos. &
+            $O(1)$ &~\cite{newton1687} \\
+            \midrule
+            Integración Numérica &
+            Utiliza métodos como Runge-Kutta para simular movimientos.
+
+            Permite aproximaciones numéricas para sistemas complejos. &
+            $O(n^2)$ &~\cite{Orlov2017} \\
+            \midrule
+            Algoritmo de Barnes-Hut &
+            Método de agrupamiento jerárquico para reducir complejidad computacional.
+
+            Mejora la eficiencia en simulaciones de múltiples cuerpos. &
+            $O(n \log n)$ &~\cite{Barnes1986} \\
+            \bottomrule
+        \end{tabular}
+    \end{adjustbox}
+\end{table}
+\end{frame}
+
+\begin{frame}{Anexo \thesection~: Selección de Integradores Simplécticos}
+    \centering
+    \captionof{table}{Evaluación de Integradores Simplécticos Relevantes}%
+    \label{tab:integrators_beamer_short}
+    \vspace{-0.1cm}
+    \begin{adjustbox}{max width=\textwidth, max height=0.32\textheight, keepaspectratio}
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{
+            >{\bfseries\raggedright}p{3.5cm} % Variante
+            >{\centering\arraybackslash}p{4.5cm} % Eficiencia Kepleriana
+            >{\centering\arraybackslash}p{4cm} % Manejo Encuentros
+            >{\centering\arraybackslash}p{4cm} % Complejidad Implementación
+        }
+            \toprule
+            \textbf{Integrador} & \textbf{Eficiencia en Sistemas Keplerianos Dominados} & \textbf{Manejo de Encuentros Cercanos} & \textbf{Complejidad del Método Base} \\
+            \midrule
+            Leapfrog/Verlet & Moderada & \xmark~(Requiere regularización)  & Baja \\
+            \midrule
+            \rowcolor{yellow!30}
+            Wisdom-Holman (WHFast)  & \textbf{\cmark~\cmark~(Muy Alta)} & \textbf{\qmark~(Requiere hibridación)} & \textbf{Moderada} \\
+            \midrule
+            Orden Superior (Yoshida)& Variable & \xmark~(Puede ser inestable) & Alta \\
+            \midrule
+            \rowcolor{yellow!30}
+            Híbridos (con WHFast) & Alta (base WHFast) & \cmark~(Propósito principal) & Alta (Combinación) \\
+            \bottomrule
+        \end{tabular}
+    \end{adjustbox}
+    \smallskip
+    \vspace{0.2cm}
+    \footnotesize\\
+    \textbf{Leyenda:} \cmark~\cmark~Muy Bueno/Alto, \cmark~Bueno/Moderado, \qmark~Depende/Requiere Adicional, \xmark~Bajo/No Directo
+\end{frame}
