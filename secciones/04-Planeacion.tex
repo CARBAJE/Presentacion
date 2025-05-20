@@ -1,1 +1,91 @@
 \section{Planeación}
+
+\begin{frame}{Juicio de Expertos: M.C. José Alberto Torres León}
+  \textbf{Perfil del Experto}
+  \RaggedRight
+  \scriptsize
+  Egresado del Centro de Investigación en Cómputo (CIC) del Instituto Politécnico Nacional, sus áreas de especialización
+  incluyen agentes inteligentes para videojuegos (jugadores y dinámicos), optimización evolutiva entre otros.
+
+  \bigskip
+
+  \textbf{Resumen de Opiniones y Observaciones Obtenidas}
+  \RaggedRight
+  \scriptsize
+  Tras la revisión del material y la discusión, el M.C. Torres León aportó las siguientes observaciones y valoraciones:
+  \begin{itemize}
+    \item Modificación de parámetros en tiempo de ejecución
+    \item Simulaciones apegadas a la realidad
+    \item Interacciones dinámicas
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Requerimientos funcionales}
+  \begin{columns}[T]
+    \column{0.5\textwidth}
+      \begin{itemize}
+        \item Iniciar simulación dinámica de masa.
+        \item Simular interacciones gravitacionales.
+        \item Usar método multipolar rápido y Barnes-Hut.
+      \end{itemize}
+    \column{0.5\textwidth}
+      \begin{itemize}
+        \item Implementar algoritmos bioinspirados para ajustar dinámicamente los parametros.
+        \item Incluir módulo de visualización gráfica de evolución.
+        \item Ofrecer interfaz básica para modificar parámetros.
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Requerimientos no funcionales}
+  \begin{columns}[T]
+    \column{0.3\textwidth}
+      \begin{itemize}
+        \item Optimizar complejidad de simulaciones.
+        \item Permitir extensión futura a más de dos cuerpos.
+        \item Respetar leyes de la física y mecánica celeste.
+      \end{itemize}
+    \column{0.3\textwidth}
+      \begin{itemize}
+        \item Mantener simulaciones estables al modificar parámetros.
+        \item Ser interfaz intuitiva y accesible.
+        \item Ejecutarse en hardware de gama media.
+      \end{itemize}
+    \column{0.3\textwidth}
+      \begin{itemize}
+        \item Integrarse con entornos virtuales (Unreal Engine).
+        \item Ser modular para facilitar actualizaciones y correcciones.
+        \item Incluir documentación clara.
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Formulación del Problema de Optimización}
+
+\begin{block}{Función Objetivo}
+  Minimizar el valor absoluto del exponente de Lyapunov ($\lambda$) en función de las masas $m_1$ y $m_2$:
+  $$ \text{Minimizar} \quad |\lambda(m_1, m_2)| $$
+\end{block}
+
+\begin{block}{Variables de Decisión}
+  \begin{itemize}
+      \item $m_1$: Masa del cuerpo 1
+      \item $m_2$: Masa del cuerpo 2
+  \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Formulación del Problema de Optimización}
+\begin{block}{Restricciones}
+  \begin{itemize}
+      \item El exponente de Lyapunov debe ser menor a 0.1:
+      $$ \lambda(m_1, m_2) < 0.1 $$
+      \item La masa del cuerpo 2 debe ser menor a 10 veces la masa del cuerpo 1:
+      $$ m_2 < 10 m_1 $$
+      \item Las masas deben ser positivas:
+      $$ m_1 > 0 $$
+      $$ m_2 > 0 $$
+  \end{itemize}
+\end{block}
+
+\end{frame}
