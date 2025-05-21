@@ -1,4 +1,4 @@
-\section{Tablas Comparativas del Marco Teórico}
+\section[Comparativas]{Tablas Comparativas del Marco Teórico}
 
 \begin{frame}{Anexo \thesection~: Lenguaje de Programación}
     \centering
@@ -18,7 +18,7 @@
             Integración con REBOUND & Directa con linking C. & Interfaz oficial en Python lista para usar. \\
             Algoritmos Bioinspirados & Óptimo si se implementan desde cero. & Fáciles de coordinar o conectar con código externo. \\
             Gestión de Memoria & Manual. Mayor control. & Automática. Simplifica el desarrollo. \\
-            Curva de Aprendizaje & Alta.. & Baja a moderada.. \\
+            Curva de Aprendizaje & Alta. & Baja a moderada.. \\
             Prototipado / Experimentación & Lento. & Ágil. \\
             Depuración & Complejo. & Sencillo. \\
             Enfoque del Proyecto & Control total, pero puede complicar. & Permite centrarse en la solución y resultados. \\
@@ -236,3 +236,70 @@
     \footnotesize\\
     \textbf{Leyenda:} \cmark~\cmark~Muy Bueno/Alto, \cmark~Bueno/Moderado, \qmark~Depende/Requiere Adicional, \xmark~Bajo/No Directo
 \end{frame}
+
+% \begin{frame}{Estado del arte}
+%     \centering
+%     \captionof{table}{Comparativa contra soluciones disponibles}%
+%     \label{tab:arte}
+%     \vspace{-0.1cm}
+%     \begin{adjustbox}{max width=0.9\textwidth,max height=0.7\textheight, keepaspectratio}
+%         \renewcommand{\arraystretch}{1.3}
+%             \begin{tabular}{@{}>{\bfseries}p{0.35\textwidth} p{0.4\textwidth} p{0.20\textwidth} p{0.15\textwidth} p{0.35\textwidth}@{}}
+%             \toprule
+%             \textbf{Producto o metodo} & \textbf{Características} & \textbf{Escalabilidad} & \textbf{Usa IA} & \textbf{Cambios dinamicos} \\
+%             \midrule
+%             ode\_num\_int & Framework C++11 modular para EDOs; orientado a pruebas de integradores. & Media & No & No \\
+%             Representación Geométrica & Quadtrees/Octrees para geometría eficiente, no simula dinámica. & Alta & No & No \\
+%             Método n-NNN & Simulación con n-vecinos y cirugía Hamiltoniana; inspirado en IA.\ & Alta & Sí & No \\
+%             PKDGRAV3 & Hidrodinámica sin malla (MFM/MFV); vecinos adaptativos. & Alta & No & No \\
+%             \bottomrule
+%             \end{tabular}
+%     \end{adjustbox}
+%     \smallskip
+% \end{frame}
+%
+%
+%
+% \begin{frame}{Estado del arte}
+%     \centering
+%     \captionof{table}{Comparativa contra soluciones disponibles}%
+%     \label{tab:arte}
+%     \vspace{-0.1cm}
+%     \begin{adjustbox}{max width=0.9\textwidth,max height=0.7\textheight, keepaspectratio}
+%         \renewcommand{\arraystretch}{1.3}
+%             \begin{tabular}{@{}>{\bfseries}p{0.35\textwidth} p{0.4\textwidth} p{0.20\textwidth} p{0.15\textwidth} p{0.35\textwidth}@{}}
+%             \toprule
+%             \textbf{Producto o metodo} & \textbf{Características} & \textbf{Escalabilidad} & \textbf{Usa IA} & \textbf{Cambios dinamicos} \\
+%             \midrule
+%             SPH/N-body Híbrido & Interacciones gas-estrella con árbol Barnes-Hut y pasos bloque. & Alta & No & No \\
+%             Integrador Simpléctico & Orden 2+, reversible; ideal para colisiones. & Media & No & No \\
+%             Solver TPM & Combina PM y Tree según densidad local; altamente paralelizado. & Alta & No & No \\
+%             Algoritmo TPM & Descomposición por densidad; integración multi-escala. & Alta & No & No \\
+%             \bottomrule
+%             \end{tabular}
+%     \end{adjustbox}
+%     \smallskip
+% \end{frame}
+%
+%
+% \begin{frame}{Estado del arte}
+%     \centering
+%     \captionof{table}{Comparativa contra soluciones disponibles}%
+%     \label{tab:arte}
+%     \vspace{-0.1cm}
+%     \begin{adjustbox}{max width=0.9\textwidth,max height=0.7\textheight, keepaspectratio}
+%         \renewcommand{\arraystretch}{1.3}
+%             \begin{tabular}{@{}>{\bfseries}p{0.35\textwidth} p{0.4\textwidth} p{0.20\textwidth} p{0.15\textwidth} p{0.35\textwidth}@{}}
+%             \toprule
+%             \textbf{Producto o metodo} & \textbf{Características} & \textbf{Escalabilidad} & \textbf{Usa IA} & \textbf{Cambios dinamicos} \\
+%             \midrule
+%             REBOUND & Modular; incluye varios integradores, colisiones y condiciones frontera. & Alta & No & No \\
+%             Estabilidad Planetaria & Estudio con REBOUND;\ Gini vs.\ inestabilidad. No eventos internos. & Alta & No & No \\
+%             \midrule
+%             \rowcolor{yellow!20}
+%             \textbf{Solución Propuesta} & \textbf{Combina FMM/Barnes-Hut para cálculo gravitacional eficiente con Algoritmos Bioinspirados para la \textit{optimización y ajuste dinámico} de parámetros (masa) durante la simulación.}  & \textbf{Alta} & \textbf{SÍ} & \textbf{SÍ} \\
+%             \bottomrule
+%             \end{tabular}
+%     \end{adjustbox}
+%     \smallskip
+% \end{frame}

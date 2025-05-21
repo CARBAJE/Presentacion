@@ -1,119 +1,16 @@
 \section{Análisis}
 
-\begin{frame}{Matríz de procesos}
-    \centering
-    \captionof{table}{Matríz de procesos I}%
-    \label{tab:procesos}
-    \vspace{-0.1cm}
-    \begin{adjustbox}{max width=0.9\textwidth,max height=0.7\textheight, keepaspectratio}
-        \renewcommand{\arraystretch}{1.3}
-            \begin{tabular}{@{}>{\bfseries}p{0.35\textwidth}  p{0.35\textwidth} p{0.35\textwidth}@{}}
-            \toprule
-            \textbf{Nombre del proceso} & \textbf{Objetivo} & \textbf{Salidas}  \\
-            \midrule
-            \textbf{Captura Parámetros} & Recopilar, validar y almacenar parámetros de configuración del usuario. & Estructura \texttt{\seqsplit{ConfigurationData}} validada, estado de UI actualizado. \\
-            \midrule
-            \textbf{Mostrar Resultados} & Presentar solución óptima y visualización final al usuario. & Actualización visual de la UI con resultados finales. \\
-            \midrule
-            \textbf{Evaluar Fitness} & Calcular fitness penalizado (\texttt{\seqsplit{F}\_p}) combinando LE y violaciones. & Valor numérico de $F_p(x)$. \\
-            \midrule
-            \textbf{Crear Nueva Simulación} & Instanciar un nuevo entorno de simulación vacío en \texttt{\seqsplit{REBOUND}}. & Referencia a nuevo objeto \texttt{\seqsplit{Simulation}}. \\
-            \bottomrule
-            \end{tabular}
-    \end{adjustbox}
-    \smallskip
-\end{frame}
-
-
-\begin{frame}{Matríz de procesos II}
-    \centering
-    \captionof{table}{Matríz de procesos}%
-    \label{tab:procesos}
-    \vspace{-0.1cm}
-    \begin{adjustbox}{max width=0.9\textwidth,max height=0.7\textheight, keepaspectratio}
-        \renewcommand{\arraystretch}{1.3}
-            \begin{tabular}{@{}>{\bfseries}p{0.35\textwidth}  p{0.35\textwidth} p{0.35\textwidth}@{}}
-            \toprule
-            \textbf{Nombre del proceso} & \textbf{Objetivo} & \textbf{Salidas}  \\
-            \midrule
-            \textbf{Agregar Cuerpos} & Añadir una partícula con propiedades físicas a la simulación. & Instancia \texttt{\seqsplit{sim}} modificada con nueva partícula. \\
-            \midrule
-            \textbf{Iniciar/Ejecutar Simulación} & Ejecutar la integración numérica paso a paso hasta $T_{\max}$. & Estructura \texttt{\seqsplit{SimulationResult}} con trayectoria completa. \\
-            \midrule
-            \textbf{Recolectar Datos} & Extraer estado actual del sistema en instantes de visualización. & Estructura \texttt{\seqsplit{VisualizationState}} con instantánea del sistema. \\
-            \midrule
-            \textbf{Generar Gráficos} & Dibujar o actualizar la representación visual en la pantalla. & Representación gráfica actualizada en la UI.\\
-            \bottomrule
-            \end{tabular}
-    \end{adjustbox}
-    \smallskip
-\end{frame}
-
-\begin{frame}{Diccionario de Datos: Cuerpo celeste}
-  \centering
-  \captionof{table}{Cuerpo celeste.}%
-  \label{tab:diccionario_cuerpos_slide}
-  \begin{adjustbox}{max width=0.9\textwidth}
-    \begin{tabular}{@{}p{3cm} p{4cm} p{1.5cm} p{1.5cm} p{2.5cm}@{}}
-      \toprule
-      \textbf{Nombre del atributo} & \textbf{Descripción} & \textbf{Tipo} & \textbf{Rango} & \textbf{Ejemplo} \\
-      \midrule
-      \textbf{masa} & Masa del cuerpo celeste\ldots & \texttt{float} & \(>0\) (positivos)\ldots & 1.0 \\
-      \midrule
-      \textbf{a} & Semieje mayor de la órbita\ldots & \texttt{float} & \(>0\) (positivos) & 1.0 \\
-      \midrule
-      \textbf{e} & Excentricidad orbital\ldots & \texttt{float} & $[0, 1)$ & 0.1 \\
-      \midrule
-      \textbf{inc\_deg} & Inclinación orbital\ldots & \texttt{float} & [0°, 180°] & 30.0 \\
-      \midrule
-      \textbf{perturba} & Indica si se aplica\ldots & \texttt{bool} & \texttt{True} o \texttt{False} & True \\
-      \bottomrule
-    \end{tabular}
-  \end{adjustbox}
-\end{frame}
-
-\begin{frame}{Diccionario de Datos: Simulación}
-  \centering
-  \captionof{table}{Simulación.}%
-  \label{tab:diccionario_simulación_slide}
-  \begin{adjustbox}{max width=0.9\textwidth}
-    \begin{tabular}{@{}p{3cm} p{4cm} p{1.5cm} p{1.5cm} p{2.5cm}@{}}
-      \toprule
-      \textbf{Nombre del atributo} & \textbf{Descripción} & \textbf{Tipo} & \textbf{Rango} & \textbf{Ejemplo} \\
-      \midrule
-      \textbf{t\_max} & Tiempo total de simulación\ldots & \texttt{float} & \( > 0 \) (positivos) & 100.0 \\
-      \midrule
-      \textbf{N\_steps} & Número de pasos a almacenar\ldots & \texttt{entero} & \(>0\) (positivos) & 1000 \\
-      \midrule
-      \textbf{sim.units} & Unidades de la simulación\ldots & \texttt{texto} & \texttt{AU, yr, Msun} & AU, yr, Msun \\
-      \midrule
-      \textbf{sim.integrator} & Indica el integrador numérico\ldots & \texttt{texto} & \texttt{ias15, whfast, BS, mercurius} & ias15 \\
-      \midrule
-      \textbf{x, y, z} & Guarda las posiciones\ldots & \texttt{array(float)} & \(>0\) (positivos) & [5.0, 230.0, 20.0] \\
-      \bottomrule
-    \end{tabular}
-  \end{adjustbox}
-\end{frame}
-
-\begin{frame}{Diccionario de Datos: Métricas}
-  \centering
-  \captionof{table}{Métricas.}%
-  \label{tab:diccionario_métricas_slide}
-  \begin{adjustbox}{max width=0.9\textwidth}
-    \begin{tabular}{@{}p{3cm} p{4cm} p{2.5cm} p{1.5cm} p{2.5cm}@{}}
-      \toprule
-      \textbf{Nombre del atributo} & \textbf{Descripción} & \textbf{Tipo} & \textbf{Rango} & \textbf{Ejemplo} \\
-      \midrule
-      \textbf{times} & Array que guarda los tiempos\ldots & \texttt{array(float)} & \(>0\) (positivos) & [0.0, 100.0, 200.0] \\
-      \midrule
-      \textbf{energy} & Energía total del sistema\ldots & \texttt{float} & Valor real & -0.5 \\
-      \midrule
-      \textbf{a\_arr, a\_pert} & Array que guarda el semieje\ldots & \texttt{array(float)} & \(>0\) (positivos) & [1.0, 1.5, 2.0] \\
-      \midrule
-      \textbf{e\_arr, e\_pert} & Array que guarda la excentricidad\ldots & \texttt{array(float)} & $[0, 1)$ & [0.1, 0.2, 0.3] \\
-      \midrule
-      \textbf{Exponente de Lyapunov ($\mathbf{\lambda}$)}& Indica la tasa de crecimiento\ldots & \texttt{float} & Valor real & 0.01 \\
-      \bottomrule
-    \end{tabular}
-  \end{adjustbox}
+\begin{frame}{Diagrama de Arquitectura}%
+    \vspace{-0.15cm}
+    \begin{figure}[H]
+        \centering
+        \href{run:C:/Users/emicr/Documents/ESCOLARES/ESCOM/TRABAJO TERMINAL/Presentacion/img/Analisis/DiagramaProcesos/DiagramasAnalisis.drawio}{%
+            \adjustbox{max width=\textwidth, max height=0.7\textheight}{%
+                \includegraphics{img/Analisis/DiagramaActividades2.png}
+            }
+        }
+        \vspace{-0.25cm}
+        \caption{\tiny~Diagrama de Actividades propuesto para el modelo.~\textit{Autoría Propia}}%
+        \label{fig:activities_diagram}
+    \end{figure}
 \end{frame}

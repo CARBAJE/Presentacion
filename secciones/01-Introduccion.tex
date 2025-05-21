@@ -3,7 +3,7 @@
 \begin{frame}{Introducción}
     \vspace{-0.15cm}
     {\fontsize{8pt}{10pt}\selectfont
-    Las simulaciones de \textit{n\footnote{\tiny Durante toda la presentación se usara $n = 2$, dado el acotamiento que se tiene para el presente Trabajo Terminal.}}-cuerpos, usadas en astrofísica para modelar interacciones galácticas y sistemas planetarios, tienen una restricción: \textbf{masas estáticas}. Esto limita la precisión al simular procesos de masa variable, un ejemplo de estos proces es: la evolución estelar.
+    Las simulaciones de \textit{n\footnote{\tiny Durante toda la presentación se usara $n = 2$, dado el acotamiento que se tiene para el presente Trabajo Terminal.}}-cuerpos, usadas en astrofísica para modelar interacciones galácticas y sistemas planetarios. %, tienen una restricción: \textbf{masas estáticas}. Esto limita la precisión al simular procesos de masa variable, un ejemplo de estos proces es: la evolución estelar.
     }
     \vspace{0cm}
     \begin{figure}[H]
@@ -15,6 +15,29 @@
         \caption{\tiny Diagrma del ciclo de evolución de una estrella.~\textit{Propiedad de: }~\cite{smartyprints_constellation_poster_2025}}%
         \label{fig:star-constellation-map}
     \end{figure}
+\end{frame}
+
+\begin{frame}{Antecedentes}
+    \vspace{-0.15cm}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            % Aquí podrías incluir una imagen de ejemplo
+            \centering
+            \begin{figure}[H]
+                \centering
+                \adjustbox{max width=\textwidth, max height=0.5\textheight}{%
+                \includegraphics{img/introduccion/Portrait_of_Sir_Isaac_Newton_1689.jpg}
+                }
+                \vspace{-0.25cm}
+                \caption{\tiny~Retrato de Sir Isaac Newton pintado por Sir Godfrey Kneller en 1689 \textit{Extraído de:}~\cite{cambridge_newton_kneller_2016}}%
+                \label{fig:Isaac_Newton_Portrait}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \[\mathbf{F}_{ij} = \frac{Gm_i m_j (\mathbf{q}_j - \mathbf{q}_i)}{\|\mathbf{q}_j - \mathbf{q}_i\|^3},\]\\
+            \[m_i \frac{d^2 \mathbf{q}_i}{dt^2} = \sum_{j=1, j \neq i}^{N} \frac{G m_i m_j (\mathbf{q}_j - \mathbf{q}_i)}{\|\mathbf{q}_j - \mathbf{q}_i\|^3} \]
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Planteamiento Del Problema}%
@@ -30,7 +53,7 @@
             }
         }
         \vspace{-0.25cm}
-        \caption{\tiny~Colisión de dos estrellas de neutrones (Simulación).~\textit{Extraido de:}~\cite{nasa_star_collision_2018}}%
+        \caption{\tiny~Colisión de dos estrellas de neutrones (Simulación).~\textit{Extraído de:}~\cite{nasa_star_collision_2018}}%
         \label{fig:neutron_star_merger}
     \end{figure}
 \end{frame}
@@ -55,7 +78,7 @@
     \vspace{-0.15cm}
     \begin{minipage}[c]{0.65\textwidth}
         {\fontsize{8pt}{10pt}\selectfont
-        Desarrollar un modelo teórico para la simulación del problema de dos cuerpos que permita la modificación dinámica de la masa, mejorando la estabilidad local del sistema visible en la representación de sus interacciones gravitacionales y eventos asociados.}
+        Desarrollar un modelo de optimización para la simulación del problema de dos cuerpos que permita la modificación dinámica de la masa, mejorando la estabilidad local del sistema visible en la representación de sus interacciones gravitacionales y eventos asociados.}
     \end{minipage}
     \hfill
     \begin{minipage}[c]{0.3\textwidth}
