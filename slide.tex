@@ -32,6 +32,7 @@
 \usepackage{colortbl}
 \usepackage{adjustbox}
 \usepackage{seqsplit}
+\usepackage{pgfgantt}
 % dummy text; remove it when working on this template
 \usepackage{pifont}
 \newcommand{\xmark}{\ding{55}}
@@ -63,6 +64,17 @@
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 \definecolor{halfgray}{gray}{0.55}
 
+\definecolor{taskred}{RGB}{220, 50, 50}
+\definecolor{taskblue}{RGB}{50, 100, 200}
+\definecolor{taskgreen}{RGB}{50, 150, 50}
+\definecolor{taskorange}{RGB}{255, 140, 0}
+\definecolor{linkblue}{RGB}{0, 120, 180}
+
+% Setting Gantt link labels
+\setganttlinklabel{s-s}{START-TO-START}
+\setganttlinklabel{f-s}{FINISH-TO-START}
+\setganttlinklabel{f-f}{FINISH-TO-FINISH}
+
 
 \lstset{
     basicstyle=\ttfamily\small,
@@ -87,8 +99,8 @@
     \include{secciones/03-MarcoTeorico}
     \include{secciones/04-Planeacion}
     \include{secciones/05-Analisis}
-    \include{secciones/06-Familiarizacion.tex}
-    \include{secciones/07-conclusion.tex}
+    \include{secciones/06-Familiarizacion}
+    \include{secciones/07-conclusion}
 
     \section{Referencias}
 
@@ -121,8 +133,9 @@
             \end{center}
         \endgroup
     \end{frame}
-    \input{anexos/A-comparativas.tex}
-    \input{anexos/B-Diagramas.tex}
-    \input{anexos/C-AG.tex}
+    \include{anexos/A-comparativas.tex}
+    \include{anexos/B-Diagramas.tex}
+    \include{anexos/C-AG.tex}
+    \include{anexos/D-Calendario}
 
 \end{document}

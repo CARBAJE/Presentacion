@@ -25,7 +25,7 @@
             \centering
             \begin{figure}[H]
                 \centering
-                \adjustbox{max width=\textwidth, max height=0.5\textheight}{%
+                \adjustbox{max width=0.9\textwidth, max height=0.5\textheight}{%
                 \includegraphics{img/introduccion/Portrait_of_Sir_Isaac_Newton_1689.jpg}
                 }
                 \vspace{-0.25cm}
@@ -34,8 +34,21 @@
             \end{figure}
         \end{column}
         \begin{column}{0.6\textwidth}
-            \[\mathbf{F}_{ij} = \frac{Gm_i m_j (\mathbf{q}_j - \mathbf{q}_i)}{\|\mathbf{q}_j - \mathbf{q}_i\|^3},\]\\
+            \[\mathbf{F}_{ij} = \frac{Gm_i m_j (\mathbf{q}_j - \mathbf{q}_i)}{\|\mathbf{q}_j - \mathbf{q}_i\|^3},\]
+            \vspace{0.1cm}
             \[m_i \frac{d^2 \mathbf{q}_i}{dt^2} = \sum_{j=1, j \neq i}^{N} \frac{G m_i m_j (\mathbf{q}_j - \mathbf{q}_i)}{\|\mathbf{q}_j - \mathbf{q}_i\|^3} \]
+            \vspace{0cm}
+            \begin{figure}[H]
+                \centering
+                \href{run:C:/Users/emicr/Documents/ESCOLARES/ESCOM/TRABAJO TERMINAL/Presentacion/img/introduccion/Neutron_Star_Merger_high.mp4}{%
+                    \adjustbox{max width=0.8\textwidth, max height=0.4\textheight}{%
+                        \includegraphics{img/introduccion/Neutron_Star_Merger_Still_1.jpg}
+                    }
+                }
+                \vspace{-0.25cm}
+                \caption{\tiny~Colisión de dos estrellas de neutrones (Simulación).~\textit{Extraído de:}~\cite{nasa_star_collision_2018}}%
+                \label{fig:neutron_star_merger}
+            \end{figure}
         \end{column}
     \end{columns}
 \end{frame}
@@ -47,13 +60,13 @@
     \vspace{0cm}
     \begin{figure}[H]
         \centering
-        \href{run:C:/Users/emicr/Documents/ESCOLARES/ESCOM/TRABAJO TERMINAL/Presentacion/img/introduccion/Neutron_Star_Merger_high.mp4}{%
+        \href{https://github.com/ThomasSavary08/Lyapynov/tree/main}{%
             \adjustbox{max width=\textwidth, max height=0.5\textheight}{%
-                \includegraphics{img/introduccion/Neutron_Star_Merger_Still_1.jpg}
+                \includegraphics{img/introduccion/lyapunov.png}
             }
         }
         \vspace{-0.25cm}
-        \caption{\tiny~Colisión de dos estrellas de neutrones (Simulación).~\textit{Extraído de:}~\cite{nasa_star_collision_2018}}%
+        \caption{\tiny~Ilustración de tres comportamientos de sistemas dinámicos en relación con sus exponentes de Lyapunov.~\textit{Extraído de:}~\cite{wang_numerical_methods_2014}}%
         \label{fig:neutron_star_merger}
     \end{figure}
 \end{frame}

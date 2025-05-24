@@ -1,0 +1,85 @@
+\section{Cronograma}
+\begin{frame}{Anexo \thesection~:~Cronograma del Proyecto}
+    \begin{figure}[H]
+        \centering
+        \begin{adjustbox}{width=\textwidth}
+        \begin{ganttchart}[
+            canvas/.append style={fill=none, draw=black!10, line width=0.8pt},
+            hgrid style/.style={draw=black!10, line width=0.8pt},
+            vgrid={*1{draw=black!10, line width=0.8pt}},
+            time slot unit=day,
+            today rule/.style={draw=black!70, dash pattern=on 3.5pt off 4.5pt, line width=1.5pt},
+            today label font=\small\bfseries,
+            today=22,
+            title/.style={draw=none, fill=none},
+            title label font=\bfseries\scriptsize,
+            title label node/.append style={below=5pt},
+            include title in canvas=false,
+            bar label font=\mdseries\scriptsize\color{black!80},
+            bar label node/.append style={left=0.1cm},
+            bar height=0.4,
+            bar/.append style={draw=none},
+            bar progress label font=\mdseries\tiny\color{black!80},
+            group incomplete/.append style={fill=taskblue!50},
+            group left shift=0,
+            group right shift=0,
+            group height=0.5,
+            group peaks tip position=0,
+            group label node/.append style={left=0.5cm},
+            group progress label font=\bfseries\small,
+            link/.style={-latex, line width=1.5pt, linkblue},
+            link label font=\scriptsize\bfseries,
+            link label node/.append style={below left=-2pt and 0pt}
+        ]{1}{52}
+
+        % Monthly headers
+        \gantttitle{Enero}{5}
+        \gantttitle{Febrero}{4}
+        \gantttitle{Marzo}{4}
+        \gantttitle{Abril}{5}
+        \gantttitle{Mayo}{4}
+        \gantttitle{Junio}{4}
+        \gantttitle{Julio}{5}
+        \gantttitle{Agosto}{4}
+        \gantttitle{Septiembre}{5}
+        \gantttitle{Octubre}{4}
+        \gantttitle{Noviembre}{4}
+        \gantttitle{Diciembre}{4} \\
+
+        % Weekly headers
+        \gantttitlelist{1,...,52}{1} \\ %chktex 11
+
+        % Tasks with vibrant colors
+        \ganttbar[progress=100, name=E1, bar/.append style={fill=taskred}]
+            {Investigación\_de\_técnicas}{1}{6} \\
+        \ganttbar[progress=100, name=E2, bar/.append style={fill=taskblue}]
+            {Análisis\_del\_modelo}{7}{15} \\
+        \ganttbar[progress=100, name=E3, bar/.append style={fill=taskgreen}]
+            {Definición\_del\_modelo\_matemático}{16}{19} \\
+        \ganttbar[progress=38, name=E4, bar/.append style={fill=taskorange}]
+            {Diseño\_de\_la\_arquitectura\_del\_modelo}{20}{27} \\
+        \ganttbar[progress=60, name=E5, bar/.append style={fill=taskred!70}]
+            {Evaluación\_TT-1}{20}{24} \\
+        \ganttbar[progress=0, name=E6, bar/.append style={fill=taskblue!70}]
+            {Implementación\_Inicial}{28}{37} \\
+        \ganttbar[progress=0, name=E7, bar/.append style={fill=taskgreen!70}]
+            {Pruebas\_y\_optimización}{38}{48} \\
+        \ganttbar[progress=0, name=E8, bar/.append style={fill=taskorange!70}]
+            {Generación\_de\_Manual\_de\_Usuario}{25}{50} \\
+        \ganttbar[progress=44, name=E9, bar/.append style={fill=taskred!50}]
+            {Generación\_de\_Documentación\_Técnica}{1}{50} \\
+        \ganttbar[progress=0, name=E10, bar/.append style={fill=taskblue!50}]
+            {Evaluación\_TT-2}{45}{52} \\
+
+        % Links between tasks
+        \ganttlink[link type=f-s]{E1}{E2}
+        \ganttlink[link type=f-s]{E2}{E3}
+        \ganttlink[link type=f-s]{E3}{E4}
+        \ganttlink[link type=f-s]{E4}{E6}
+        \ganttlink[link type=f-s]{E6}{E7}
+
+        \end{ganttchart}
+        \end{adjustbox}
+        \caption{Cronograma de tiempo\textit{Milestone}}
+    \end{figure}
+\end{frame}
