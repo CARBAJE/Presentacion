@@ -8,7 +8,7 @@
     \vspace{0cm}
     \begin{figure}[H]
         \centering
-        \adjustbox{max width=\textwidth, max height=0.5\textheight}{%
+        \adjustbox{max width=\textwidth, max height=0.6\textheight}{%
         \includegraphics{img/introduccion/star-constellation-map.png}
         }
         \vspace{-0.25cm}
@@ -37,18 +37,6 @@
             \[\mathbf{F}_{ij} = \frac{Gm_i m_j (\mathbf{q}_j - \mathbf{q}_i)}{\|\mathbf{q}_j - \mathbf{q}_i\|^3},\]
             \vspace{0.1cm}
             \[m_i \frac{d^2 \mathbf{q}_i}{dt^2} = \sum_{j=1, j \neq i}^{N} \frac{G m_i m_j (\mathbf{q}_j - \mathbf{q}_i)}{\|\mathbf{q}_j - \mathbf{q}_i\|^3} \]
-            \vspace{0cm}
-            \begin{figure}[H]
-                \centering
-                \href{run:C:/Users/emicr/Documents/ESCOLARES/ESCOM/TRABAJO TERMINAL/Presentacion/img/introduccion/Neutron_Star_Merger_high.mp4}{%
-                    \adjustbox{max width=0.8\textwidth, max height=0.4\textheight}{%
-                        \includegraphics{img/introduccion/Neutron_Star_Merger_Still_1.jpg}
-                    }
-                }
-                \vspace{-0.25cm}
-                \caption{\tiny~Colisión de dos estrellas de neutrones (Simulación).~\textit{Extraído de:}~\cite{nasa_star_collision_2018}}%
-                \label{fig:neutron_star_merger}
-            \end{figure}
         \end{column}
     \end{columns}
 \end{frame}
@@ -74,16 +62,34 @@
 \begin{frame}{Propuesta de Solución}%
     \vspace{-0.15cm}
     {\fontsize{8pt}{10pt}\selectfont
-    Proponemos un modelo de simulación de \textit{n}-cuerpos con \textbf{modificación dinámica de masas}, de los cuerpos del sistema, en tiempo de ejecución. Se emplearán diversos enfoques de solución al problema de \textit{n}-cuerpos para \textbf{eficiencia computacional}, y algoritmos bioinspirados para el \textbf{ajuste paramétrico adaptativo}. El modelo, \textbf{escalable}, se optimizará para hardware accesible, buscando \textbf{superar las limitaciones de los modelos actuales}.}
+    Proponemos un modelo de optimización para la simulación de \textit{n}-cuerpos con \textbf{modificación dinámica de masas}, de los cuerpos del sistema, en tiempo de ejecución, empleando algoritmos bioinspirados para el \textbf{ajuste paramétrico adaptativo}. Buscando \textbf{superar las limitaciones de los modelos actuales}.}
     \vspace{-0.1cm}
     \begin{figure}[H]
         \centering
-        \adjustbox{max width=\textwidth, max height=0.5\textheight}{%
+        \adjustbox{max width=\textwidth, max height=0.8\textheight}{%
         \includegraphics{img/introduccion/Genetic-algorithm-application.png}
         }
         \vspace{-0.25cm}
         \caption{\tiny~Ejemplo de Aplicación de un Algoritmo Genético (AG) \textit{Adaptado de:}~\cite{Kim2021}}%
         \label{fig:genetic_algorithm_application}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Hipótesis}%
+    \vspace{-0.25cm}
+    {\fontsize{8pt}{10pt}\selectfont
+    Modificar dinámicamente la masa en simulaciones de dos cuerpos, mediante algoritmos bioinspirados y métodos eficientes de cálculo gravitacional, permitirá alcanzar una estabilidad local superior frente a simuladores tradicionales con parámetros estáticos.}\\
+    \vspace{-0.1cm}
+    \begin{figure}[H]
+        \centering
+        \href{run:C:/Users/emicr/Documents/ESCOLARES/ESCOM/TRABAJO TERMINAL/Presentacion/img/introduccion/Neutron_Star_Merger_high.mp4}{%
+            \adjustbox{max width=0.8\textwidth, max height=0.6\textheight}{%
+                \includegraphics{img/introduccion/Neutron_Star_Merger_Still_1.jpg}
+            }
+        }
+        \vspace{-0.25cm}
+        \caption{\tiny~Colisión de dos estrellas de neutrones (Simulación).~\textit{Extraído de:}~\cite{nasa_star_collision_2018}}%
+        \label{fig:neutron_star_merger}
     \end{figure}
 \end{frame}
 
