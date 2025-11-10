@@ -1,0 +1,15 @@
+\begin{frame}{Implementación — Perf Timings}
+    \textbf{Rol:} medición ligera por secciones y exportación a CSV/JSONL.
+    \vspace{0.2cm}
+    \begin{itemize}
+        \item Librerías: \texttt{dataclasses}, \texttt{csv}, \texttt{json}, \texttt{uuid}, \texttt{atexit}, \texttt{pathlib}, \texttt{matplotlib} (gráficas via script).
+        \item Puntos Principales:
+        \begin{itemize}
+            \item Context managers/decoradores: \texttt{time\_block}, \texttt{time\_section} con metadatos.
+            \item Bajo overhead y buffer interno con cierre ordenado.
+            \item Filtros por run/epoch/batch y utilidades de lectura.
+            \item Integración con \texttt{scripts/plot\_timings.py} (timelines y pie chart).
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+

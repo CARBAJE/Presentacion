@@ -1,0 +1,41 @@
+% Caso 04 — Binaria + intruso (captura/escape)
+\begin{frame}{Resultados — Caso 04: Binaria con intruso}
+    \textbf{Base del problema:} dos estrellas (binaria) y un tercer cuerpo intruso tipo planeta/enano marrón con trayectoria rasante.
+    \vspace{0.2cm}
+    {\small
+    \begin{itemize}
+        \item Parámetros: $t_{short}=0.6$, $t_{long}=3.5$, $\Delta t=2\times10^{-4}$, integrador=\texttt{IAS15}.
+        \item Masas originales (escenario base): $(1.25,\ 0.7,\ 0.05)$.
+        \item Posiciones $\mathbf{r}_0$ (UA): $(-0.2916667,0,0)$, $(0.4083333,0,0)$, $(0,1.8,0)$.
+        \item Velocidades $\mathbf{v}_0$ (UA/año): $(0,-4.19812977,0)$, $(0,5.87738168,0)$, $(-3.2,0,0)$.
+    \end{itemize}
+    }
+\end{frame}
+
+\begin{frame}{Caso 04 — Masas optimizadas y comparativas}
+    {\small
+    \begin{itemize}
+        \item Masas optimizadas: $(m_1, m_2, m_3) \approx (1.373724,\ 0.607631,\ 0.262543)$.
+        \item Evolución de $\lambda$ (Lyapunov) y comparación de trayectorias.
+    \end{itemize}}
+    \vspace{0.2cm}
+    \begin{columns}[T,totalwidth=\textwidth]
+        \begin{column}{0.52\textwidth}
+            \centering
+            \adjustbox{max width=\linewidth, max height=0.7\textheight}{%
+                \includegraphics{img/resultados/caso04-comparativa_trayectoria.png}%
+            }
+            \\[-0.15cm]
+            {\tiny Comparativa de trayectorias (original vs optimizada).}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \centering
+            \adjustbox{max width=\linewidth, max height=0.7\textheight}{%
+                \includegraphics{img/resultados/caso04-evolucion_exponente.png}%
+            }
+            \\[-0.15cm]
+            {\tiny Evolución del exponente de Lyapunov $\lambda$.}
+        \end{column}
+    \end{columns}
+\end{frame}
+

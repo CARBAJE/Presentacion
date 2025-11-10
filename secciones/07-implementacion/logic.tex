@@ -1,0 +1,15 @@
+\begin{frame}{Implementación — Logic}
+    \textbf{Rol:} evaluación de fitness, algoritmo genético y orquestación.
+    \vspace{0.2cm}
+    \begin{itemize}
+        \item Librerías: \texttt{pymoo} (GA: \texttt{GA}, \texttt{SBX}, \texttt{PolynomialMutation}, \texttt{TournamentSelection}), \texttt{numpy}, utilidades propias (\texttt{time\_block}, \texttt{time\_section}).
+        \item Puntos Principales:
+        \begin{itemize}
+            \item \texttt{StreamingGA}: modo pymoo o fallback interno con cruce/mutación temporizados.
+            \item \texttt{FitnessEvaluator}: caché jerárquica y uso eficiente de simulación/Lyapunov.
+            \item \texttt{ContinuousOptimizationController}: lazo continuo con telemetría y warm-start local.
+            \item Configurable: distribución de masas (uniforme/beta), elitismo, budgets y estancamiento.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+

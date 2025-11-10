@@ -1,0 +1,15 @@
+\begin{frame}{Implementación — Core}
+    \textbf{Rol:} componentes compartidos (configuración, telemetría y cachés).
+    \vspace{0.2cm}
+    \begin{itemize}
+        \item Librerías: \texttt{dataclasses}, \texttt{logging}, \texttt{json}, \texttt{time}, \texttt{pathlib}, \texttt{typing}, \texttt{collections.OrderedDict}, \texttt{random}, \texttt{numpy} (opcional).
+        \item Puntos Principales:
+        \begin{itemize}
+            \item Configuración centralizada (\texttt{Config}) y siembra reproducible (\texttt{set\_global\_seeds}).
+            \item Telemetría estructurada (\texttt{setup\_logger}, \texttt{MetricsLogger}, \texttt{Reporter}).
+            \item Caché jerárquica y LRU para acelerar evaluaciones repetidas.
+            \item Bajo acoplamiento: API mínima y reexportaciones en \texttt{two\_body.core}.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+

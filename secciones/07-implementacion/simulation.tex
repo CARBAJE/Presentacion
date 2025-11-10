@@ -1,0 +1,15 @@
+\begin{frame}{Implementación — Simulation}
+    \textbf{Rol:} dinámica de cuerpos y estimación de estabilidad.
+    \vspace{0.2cm}
+    \begin{itemize}
+        \item Librerías: \texttt{rebound} (integrador N-cuerpos), \texttt{numpy}, \texttt{matplotlib} (timings/viz), utilidades propias (\texttt{time\_block}).
+        \item Puntos Principales:
+        \begin{itemize}
+            \item Adaptador \texttt{ReboundSim} con validación de entrada y API delgada.
+            \item \texttt{LyapunovEstimator}: soporte MEGNO/\(\lambda\) con metadatos de tiempo.
+            \item Instrumentación de rendimiento por sección (paso de simulación, cómputo Lyapunov).
+            \item Interoperabilidad directa con módulos de lógica y visualización.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+

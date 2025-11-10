@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.2 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.2" pages="3">
   <diagram id="UfX3GTwIYCYykxS3_EbV" name="Oficial">
-    <mxGraphModel dx="1042" dy="626" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3300" pageHeight="4681" background="light-dark(#ffffff, #121212)" math="0" shadow="0">
+    <mxGraphModel dx="1507" dy="736" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3300" pageHeight="4681" background="light-dark(#ffffff, #121212)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -112,7 +112,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="JpXnpGPPCI-qxTGOreqv-3" value="Lógica de Modificación de parametros a los cuerpos del sistema" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#ffe6cc;shadow=1;strokeColor=#d79b00;" parent="1" vertex="1">
+        <mxCell id="JpXnpGPPCI-qxTGOreqv-3" value="Lógica de Modificación de parámetros a los cuerpos del sistema" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#ffe6cc;shadow=1;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="780" y="420" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="aWXu2JNbEAmWP42OWAdF-2" value="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=4;curved=0;labelBackgroundColor=default;verticalAlign=bottom;exitX=1;exitY=0.75;exitDx=0;exitDy=0;flowAnimation=1;strokeColor=#CC0000;fontSize=14;fontStyle=1;textShadow=0;labelBorderColor=none;shadow=1;" parent="1" source="WRWShFA-1jyviwd3x8AQ-2" target="WRWShFA-1jyviwd3x8AQ-4" edge="1">
