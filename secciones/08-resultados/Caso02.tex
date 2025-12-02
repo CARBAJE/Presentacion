@@ -1,41 +1,37 @@
 % Caso 02 — Problema de Sitnikov
+\subsection{Caso 02: Problema de Sitnikov}
 \begin{frame}{Resultados — Caso 02: Problema de Sitnikov}
-    \textbf{Base del problema:} dos cuerpos masivos en órbita coplanaria y un tercer cuerpo que oscila a lo largo del eje perpendicular (caos determinista clásico).
+    \textbf{Descripción:} problema clásico de caos determinista; dos estrellas orbitan en el plano XY mientras un tercer cuerpo oscila en el eje Z perpendicular.\\
     \vspace{0.2cm}
     {\small
+    \textbf{Configuración del experimento:}
     \begin{itemize}
-        \item Parámetros: $t_{short}=0.5$, $t_{long}=4.0$, $\Delta t=2\times10^{-4}$, integrador=\texttt{IAS15}.
-        \item Masas originales (escenario base): $(0.8,\ 1.2,\ 2.5\times10^{-6})$.
-        \item Posiciones $\mathbf{r}_0$ (UA): $(-0.5,0,0)$, $(0.5,0,0)$, $(0,0,0.04)$.
-        \item Velocidades $\mathbf{v}_0$ (UA/año): $(0,-4.442882938,0)$, $(0,4.442882938,0)$, $(0,0,0.90)$.
+        \item Horizonte de simulación: $t_{short}=0.5$ años, $t_{long}=4.0$ años.
+        \item Integrador: \texttt{IAS15} con paso $\Delta t=2\times10^{-4}$ años.
+        \item Masas originales: $(0.8,\ 1.2,\ 2.5\times10^{-6})$ M$_\odot$.
+        \item Optimización: población 180, 50 épocas, $\omega_{periodicidad}=0.05$.
+        \item \textbf{Resultado:} Masas optimizadas $(0.819,\ 1.200,\ 2.5\times10^{-6})$ M$_\odot$.
+        \item Reducción de caos: $\lambda_{inicial}=-0.98 \rightarrow \lambda_{opt}=-15.71$.
     \end{itemize}
     }
 \end{frame}
 
-\begin{frame}{Caso 02 — Masas optimizadas y comparativas}
-    {\small
-    \begin{itemize}
-        \item Masas optimizadas: $(m_1, m_2, m_3) \approx (0.819164,\ 1.200000,\ 0.000003)$.
-        \item Evolución de $\lambda$ (Lyapunov) y comparación de trayectorias.
-    \end{itemize}}
+\begin{frame}{Caso 02 — Evolución del exponente de Lyapunov}
+    \vspace{0.1cm}
+    \begin{center}
+        \includegraphics[width=0.85\textwidth, height=0.70\textheight, keepaspectratio]{img/resultados/caso02-evolucion_exponente.png}
+    \end{center}
     \vspace{0.2cm}
-    \begin{columns}[T,totalwidth=\textwidth]
-        \begin{column}{0.52\textwidth}
-            \centering
-            \adjustbox{max width=\linewidth, max height=0.7\textheight}{%
-                \includegraphics{img/resultados/caso02-comparativa_trayectoria.png}%
-            }
-            \\[-0.15cm]
-            {\tiny Comparativa de trayectorias (original vs optimizada).}
-        \end{column}
-        \begin{column}{0.48\textwidth}
-            \centering
-            \adjustbox{max width=\linewidth, max height=0.7\textheight}{%
-                \includegraphics{img/resultados/caso02-evolucion_exponente.png}%
-            }
-            \\[-0.15cm]
-            {\tiny Evolución del exponente de Lyapunov $\lambda$.}
-        \end{column}
-    \end{columns}
+    {\small Evolución del exponente de Lyapunov mostrando estabilización progresiva del sistema.~\textit{Autoría Propia}}
 \end{frame}
 
+\begin{frame}{Caso 02 — Video Comparación de trayectorias}
+    \vspace{0.1cm}
+    \begin{center}
+        \href{run:img/resultados/vids/Caso02-Comparativa.mp4}{%
+            \includegraphics[width=0.85\textwidth, height=0.70\textheight, keepaspectratio]{img/resultados/caso02-comparativa_trayectoria.png}
+        }
+    \end{center}
+    \vspace{0.2cm}
+    {\small \textcolor{blue}{Clic en la imagen} para abrir el video comparativo en el reproductor del sistema.~\textit{Autoría Propia}}
+\end{frame}

@@ -1,52 +1,21 @@
 \section[Conclusiones]{Conclusiones y Líneas Futuras}
 \begin{frame}{Conclusiones}
-    \begin{columns}
-        \begin{column}{0.6\textwidth}
-            \textbf{Culminación del Trabajo Terminal: principales logros}
-            \begin{itemize}
-                \item Implementación integral del modelo: simulación (REBOUND), estimación de estabilidad (Lyapunov/MEGNO) y optimización evolutiva (GA) con telemetría.
-                \item Mejoras de estabilidad: reducción de $\lambda$ y trayectorias más regulares en 3/4 casos; en el Caso 04 se logra \emph{captura estable} del intruso.
-                \item Pipeline reproducible y parametrizable (unidades astronómicas), con visualización 2D/3D y scripts de análisis.
-                \item Instrumentación de rendimiento (CSV/JSONL) que permitió perfilar y optimizar cuellos de botella.
-                \item Alcance validado: 2–3 cuerpos, integradores \texttt{IAS15}/\texttt{WHFAST}, dependencias Python estándar.
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.4\textwidth}
-            \centering
-            \begin{figure}[H]
-                \centering
-                \adjustbox{max width=\textwidth, max height=0.5\textheight}{%
-                \includegraphics{img/conclusion/simulacion.jpeg}
-                }
-                \vspace{-0.25cm}
-                \caption{\tiny~Simulación y trazas comparativas (ilustrativo).}
-            \end{figure}
-        \end{column}
-    \end{columns}
+    \textbf{Principales logros alcanzados}
+    \begin{itemize}
+        \item Pipeline completo: simulación (REBOUND), análisis de estabilidad (Lyapunov) y optimización evolutiva (GA).
+        \item Mejora significativa en estabilidad: reducción de $\lambda$ en 3/4 casos; captura estable del intruso en Caso 04.
+        \item Sistema reproducible y parametrizable con visualización 2D/3D.
+        \item Instrumentación de rendimiento para identificar y optimizar cuellos de botella.
+        \item Validado para 2–3 cuerpos con integradores \texttt{IAS15}/\texttt{WHFAST}.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Líneas futuras}
-    \begin{columns}
-        \begin{column}{0.6\textwidth}
-            \begin{itemize}
-                \item Extender a $n>3$ cuerpos y paralelizar (vectorización, multiproceso, GPU/HPC).
-                \item Masas no constantes físicas: acreción/pérdida, fuerzas no gravitacionales y colisiones elásticas.
-                \item Optimización multiobjetivo: $\lambda$, periodicidad, distancias mínimas, penalización de colisiones.
-                \item Calibración con datos reales (efemérides) y validación cruzada.
-                \item Robustez: sensibilidad a condiciones iniciales, incertidumbre y muestreo Monte Carlo.
-                \item Producto: interfaz interactiva, empaquetado como librería y documentación completa.
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.4\textwidth}
-            \centering
-            \begin{figure}[H]
-                \centering
-                \adjustbox{max width=\textwidth, max height=0.5\textheight}{%
-                \includegraphics{img/conclusion/metricas.jpeg}
-                }
-                \vspace{-0.25cm}
-                \caption{\tiny~Métricas e instrumentación para iterar sobre el diseño.}
-            \end{figure}
-        \end{column}
-    \end{columns}
+    \begin{itemize}
+        \item Extender a sistemas de $n>3$ cuerpos con paralelización (GPU/HPC).
+        \item Incorporar física avanzada: masas variables, fuerzas no gravitacionales, colisiones.
+        \item Optimización multiobjetivo: balancear $\lambda$, periodicidad y distancias mínimas.
+        \item Calibración con datos reales (efemérides) y análisis de sensibilidad Monte Carlo.
+        \item Empaquetado como librería Python.
+    \end{itemize}
 \end{frame}
